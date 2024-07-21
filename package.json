@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.51.11",
+    "@types/node": "^20.14.11",
     "flowbite": "^2.4.1",
     "flowbite-react": "^0.10.1",
     "react": "^18.3.1",
@@ -18,6 +20,7 @@
   "devDependencies": {
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "@types/react-query": "^1.2.9",
     "@typescript-eslint/eslint-plugin": "^7.15.0",
     "@typescript-eslint/parser": "^7.15.0",
     "@vitejs/plugin-react": "^4.3.1",
