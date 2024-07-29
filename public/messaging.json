@@ -8,14 +8,14 @@
     "mensajes": [
       {
         "autor": "Rick Sanchez",
-        "texto": "Morty, necesitamos ir a una aventura.",
+        "texto": "Cesar, necesitamos ir a una aventura.",
         "estado": "visto",
         "dia": "hoy",
         "hora": "09:00",
         "id": "1"
       },
       {
-        "autor": "yo",
+        "autor": "Yo",
         "texto": "¿Otra vez, Rick? No sé si quiero ir.",
         "estado": "visto",
         "dia": "hoy",
@@ -24,14 +24,14 @@
       },
       {
         "autor": "Rick Sanchez",
-        "texto": "¡Morty, deja de quejarte y ven!",
+        "texto": "¡Cesar, deja de quejarte y ven!",
         "estado": "visto",
         "dia": "hoy",
         "hora": "09:06",
         "id": "3"
       },
       {
-        "autor": "yo",
+        "autor": "Yo",
         "texto": "Está bien, Rick, pero esta es la última.",
         "estado": "entregado",
         "dia": "hoy",
@@ -49,14 +49,14 @@
     "mensajes": [
       {
         "autor": "Morty Smith",
-        "texto": "Rick, ¿dónde estás?",
+        "texto": "Cesar, ¿dónde estás?",
         "estado": "visto",
         "dia": "hoy",
         "hora": "10:00",
         "id": "1"
       },
       {
-        "autor": "yo",
+        "autor": "Yo",
         "texto": "Estoy aquí, Morty. ¿Qué pasa?",
         "estado": "visto",
         "dia": "hoy",
@@ -72,7 +72,7 @@
         "id": "3"
       },
       {
-        "autor": "yo",
+        "autor": "Yo",
         "texto": "Claro, Morty, ¿qué necesitas?",
         "estado": "visto",
         "dia": "hoy",
@@ -90,14 +90,14 @@
     "mensajes": [
       {
         "autor": "Summer Smith",
-        "texto": "Rick, ¿puedes llevarme de compras?",
+        "texto": "Cesar, ¿puedes llevarme de compras?",
         "estado": "visto",
         "dia": "hoy",
         "hora": "11:00",
         "id": "1"
       },
       {
-        "autor": "yo",
+        "autor": "Yo",
         "texto": "¿De compras? ¿No tienes a alguien más para eso?",
         "estado": "visto",
         "dia": "hoy",
@@ -106,14 +106,14 @@
       },
       {
         "autor": "Summer Smith",
-        "texto": "Vamos, Rick, sé que te gustan las tiendas interdimensionales.",
+        "texto": "Vamos, Cesar, sé que te gustan las tiendas interdimensionales.",
         "estado": "visto",
         "dia": "hoy",
         "hora": "11:10",
         "id": "3"
       },
       {
-        "autor": "yo",
+        "autor": "Yo",
         "texto": "Está bien, pero solo porque necesito algunos reactivos.",
         "estado": "entregado",
         "dia": "hoy",
@@ -131,14 +131,14 @@
     "mensajes": [
       {
         "autor": "Jerry Smith",
-        "texto": "Rick, ¿puedes ayudarme con el televisor?",
+        "texto": "Cesar, ¿puedes ayudarme con el televisor?",
         "estado": "visto",
         "dia": "hoy",
         "hora": "12:00",
         "id": "1"
       },
       {
-        "autor": "yo",
+        "autor": "Yo",
         "texto": "¿Otra vez, Jerry? ¿Qué hiciste esta vez?",
         "estado": "visto",
         "dia": "hoy",
@@ -154,7 +154,7 @@
         "id": "3"
       },
       {
-        "autor": "yo",
+        "autor": "Yo",
         "texto": "Voy para allá. No toques nada más.",
         "estado": "entregado",
         "dia": "hoy",
@@ -172,14 +172,14 @@
     "mensajes": [
       {
         "autor": "Beth Smith",
-        "texto": "Rick, ¿has visto a Morty?",
+        "texto": "Cesar, ¿has visto a Morty?",
         "estado": "visto",
         "dia": "hoy",
         "hora": "13:00",
         "id": "1"
       },
       {
-        "autor": "yo",
+        "autor": "Yo",
         "texto": "Está conmigo, Beth. No te preocupes.",
         "estado": "visto",
         "dia": "hoy",
@@ -195,7 +195,7 @@
         "id": "3"
       },
       {
-        "autor": "yo",
+        "autor": "Yo",
         "texto": "De nada, hija.",
         "estado": "entregado",
         "dia": "hoy",
