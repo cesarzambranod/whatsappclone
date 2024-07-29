@@ -17,7 +17,6 @@ import {
 import { useMessages } from "@/Hooks/useMessages";
 import useContactStore from "@/Store/useContactStore";
 
-
 const ContactoInfo: React.FC = () => {
   const { contactoID } = useParams<{ contactoID: string }>();
   const { data, error, isLoading } = useMessages();
@@ -87,22 +86,22 @@ const ContactoInfo: React.FC = () => {
         </div>
       </div>
       <div className="flex flex-col gap-4 mx-4">
-        <div className="flex items-center text-white border-b border-green-800 py-2 hover:bg-green-600">
+        <div className="flex items-center text-green-800 border-b border-green-800 py-2 hover:bg-green-600">
           <Bell className="text-gray-400 text-2xl" />
           <p className="ml-2 flex flex-col">Notificaciones</p>
         </div>
-        <div className="flex items-center text-white border-b border-green-800 py-2 hover:bg-green-600">
+        <div className="flex items-center text-green-800 border-b border-green-800 py-2 hover:bg-green-600">
           <Image className="text-gray-400 text-2xl" />
           <p className="ml-2 flex flex-col">
             Visibilidad de archivos multimedia
             <span className="text-gray-400 text-sm">Desactivada</span>
           </p>
         </div>
-        <div className="flex items-center text-white border-b border-green-800 py-2 hover:bg-green-600">
+        <div className="flex items-center text-green-800 border-b border-green-800 py-2 hover:bg-green-600">
           <Bookmark className="text-gray-400 text-2xl" />
           <p className="ml-2 flex flex-col">Mensajes conservados</p>
         </div>
-        <div className="flex items-center text-white border-b border-green-800 py-2 hover:bg-green-600">
+        <div className="flex items-center text-green-800 border-b border-green-800 py-2 hover:bg-green-600">
           <Lock className="text-gray-400 text-2xl" />
           <p className="ml-2 flex flex-col">
             Cifrado
@@ -112,14 +111,14 @@ const ContactoInfo: React.FC = () => {
             </span>
           </p>
         </div>
-        <div className="flex items-center text-white border-b border-green-800 py-2 hover:bg-green-600">
+        <div className="flex items-center text-green-800 border-b border-green-800 py-2 hover:bg-green-600">
           <Clock className="text-gray-400 text-2xl" />
           <p className="ml-2 flex flex-col">
             Mensajes temporales
             <span className="text-gray-400 text-sm">90 días</span>
           </p>
         </div>
-        <div className="flex items-center text-white border-b border-green-800 py-2 hover:bg-green-600">
+        <div className="flex items-center text-green-800 border-b border-green-800 py-2 hover:bg-green-600">
           <ShieldCheck className="text-gray-400 text-2xl" />
           <p className="ml-2 flex flex-col">
             Restringir chat

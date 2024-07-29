@@ -1,19 +1,31 @@
 import React from "react";
 import { avatars } from "@/Utils/avatars";
 import { Link } from "react-router-dom";
-import checkIcon from "@/assets/icons/check.svg";
-import doubleCheckIcon from "@/assets/icons/doublecheck.svg";
-import doubleCheckBlueIcon from "@/assets/icons/doublecheckblue.svg";
+import { Check, CheckCheck } from "lucide-react";
 import type Contact from "@/Model/Contact";
+
 interface ContactProps {
   contact: Contact;
-}                                                                                                                       
+}
+
 const Contacts: React.FC<ContactProps> = ({ contact }) => {
   const { id, nombre, thumbnail, mensajes } = contact;
   const imgSrc = avatars[thumbnail as keyof typeof avatars];
   const lastMessage = mensajes[mensajes.length - 1];
   const horaUltimoMensaje = lastMessage?.hora;
   const statusUltimoMensaje = lastMessage?.estado;
+
+  // Function to get the icon based on status
+  const getStatusIcon = () => {
+    switch (statusUltimoMensaje) {
+      case "visto":
+        return <CheckCheck className="w-5 h-5 text-blue-500" />;
+      case "entregado":
+        return <CheckCheck className="w-5 h-5 text-gray-500" />;
+      default:
+        return <Check className="w-5 h-5 text-gray-500" />;
+    }
+  };
 
   return (
     <Link className="block text-gray-900" to={`/mensajes/${id}`}>
@@ -26,18 +38,8 @@ const Contacts: React.FC<ContactProps> = ({ contact }) => {
         <div className="flex-1">
           <p className="text-lg font-semibold">{nombre}</p>
           <div className="flex items-center text-gray-600">
-            <img
-              className="w-5 h-5 mr-2"
-              src={
-                statusUltimoMensaje === "visto"
-                  ? doubleCheckBlueIcon
-                  : statusUltimoMensaje === "entregado"
-                  ? doubleCheckIcon
-                  : checkIcon
-              }
-              alt={statusUltimoMensaje}
-            />
-            <span>{lastMessage?.texto}</span>
+            {getStatusIcon()}
+            <span className="ml-2">{lastMessage?.texto}</span>
           </div>
         </div>
         <div className="text-gray-500 text-sm">{horaUltimoMensaje}</div>

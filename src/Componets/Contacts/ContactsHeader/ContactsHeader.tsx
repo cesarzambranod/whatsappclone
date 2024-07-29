@@ -1,6 +1,5 @@
 import React from "react";
-import cameraIcon from "@/assets/icons/camera.svg";
-import threePointIcon from "@/assets/icons/three_point.svg";
+import {Camera , MoreVertical } from "lucide-react";
 import FormSearchContacts from "../FormSearchContacts/FormSearchContacts";
 
 interface ContactosHeaderProps {
@@ -23,10 +22,10 @@ const ContactosHeader: React.FC<ContactosHeaderProps> = ({
         </div>
         <div className="flex space-x-4">
           <button className="flex flex-col items-center">
-            <img src={cameraIcon} alt="Status" className="w-6 h-6" />
+            <Camera className="text-white w-6 h-6" />
           </button>
           <button className="flex flex-col items-center">
-            <img src={threePointIcon} alt="Calls" className="w-6 h-6" />
+            <MoreVertical className="text-white w-6 h-6" />
           </button>
         </div>
       </div>
