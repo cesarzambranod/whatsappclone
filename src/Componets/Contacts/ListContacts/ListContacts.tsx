@@ -1,21 +1,8 @@
-import React, { useEffect } from "react";
-import { Contact as ContactComponent } from "../Contact";
-import { Avatars } from "@/Utils/avatars";
+import React, { useEffect } from "React";
+import { Contacts as ContactComponent } from "../Contacts";
+import Contact  from "@/Model/Contact";
 import { useMessages } from "@/Hooks/useMessages";
 import useContactStore from "@/Store/useContactStore";
-
-interface Message {
-  texto: string;
-  hora: string;
-  estado: "visto" | "entregado" | "no_entregado";
-}
-
-interface Contact {
-  id: string;
-  nombre: string;
-  thumbnail: keyof Avatars;
-  mensajes: Message[];
-}
 
 interface ListContactsProps {
   search: string;
@@ -28,13 +15,16 @@ const ListContacts: React.FC<ListContactsProps> = ({ search }) => {
   useEffect(() => {
     if (data) {
       const formattedContacts: Contact[] = data.map((group) => ({
-        id: group.id.toString(),
+        id: Number(group.id),
         nombre: group.nombre,
-        thumbnail: group.thumbnail as keyof Avatars,
+        thumbnail: group.thumbnail,
         mensajes: group.mensajes.map((message) => ({
+          id: Number(message.id),
           texto: message.texto,
           hora: message.hora,
           estado: message.estado as "visto" | "entregado" | "no_entregado",
+          autor: message.autor,
+          dia: message.dia,
         })),
       }));
       setContacts(formattedContacts);

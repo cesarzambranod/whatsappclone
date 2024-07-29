@@ -1,28 +1,16 @@
 import React from "react";
-import { avatars, Avatars } from "@/Utils/avatars";
+import { avatars } from "@/Utils/avatars";
 import { Link } from "react-router-dom";
 import checkIcon from "@/assets/icons/check.svg";
 import doubleCheckIcon from "@/assets/icons/doublecheck.svg";
 import doubleCheckBlueIcon from "@/assets/icons/doublecheckblue.svg";
-
-interface Message {
-  texto: string;
-  hora: string;
-  estado: "visto" | "entregado" | "no_entregado";
-}
-
+import type Contact from "@/Model/Contact";
 interface ContactProps {
-  contact: {
-    id: string;
-    nombre: string;
-    thumbnail: keyof Avatars;
-    mensajes: Message[];
-  };
-}
-
-const Contact: React.FC<ContactProps> = ({ contact }) => {
+  contact: Contact;
+}                                                                                                                       
+const Contacts: React.FC<ContactProps> = ({ contact }) => {
   const { id, nombre, thumbnail, mensajes } = contact;
-  const imgSrc = avatars[thumbnail];
+  const imgSrc = avatars[thumbnail as keyof typeof avatars];
   const lastMessage = mensajes[mensajes.length - 1];
   const horaUltimoMensaje = lastMessage?.hora;
   const statusUltimoMensaje = lastMessage?.estado;
@@ -58,4 +46,4 @@ const Contact: React.FC<ContactProps> = ({ contact }) => {
   );
 };
 
-export default Contact;
+export default Contacts;

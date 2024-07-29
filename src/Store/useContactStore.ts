@@ -1,19 +1,6 @@
-import { Avatars } from '@/Utils/avatars';
+import Contact from '@/Model/Contact';
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
-
-interface Message {
-    texto: string;
-    hora: string;
-    estado: 'visto' | 'entregado' | 'no_entregado';
-}
-
-interface Contact {
-    id: string;
-    nombre: string;
-    thumbnail: keyof Avatars;
-    mensajes: Message[];
-}
 
 interface ContactState {
     contacts: Contact[];
