@@ -1,12 +1,16 @@
-import './App.css'
-import { ContactsScreen } from './Screens/Contacts/ContactsScreen'
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import { ContactsScreen } from "./Screens/Contacts/ContactsScreen";
 
 function App() {
   return (
     <>
-      <ContactsScreen></ContactsScreen>
+      <Routes>
+        <Route path="/" element={<ContactsScreen />} />
+        <Route path="/contactos" element={<ContactsScreen />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

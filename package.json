@@ -14,8 +14,11 @@
     "@types/node": "^20.14.11",
     "flowbite": "^2.4.1",
     "flowbite-react": "^0.10.1",
+    "lucide": "^0.417.0",
+    "lucide-react": "^0.417.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.25.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

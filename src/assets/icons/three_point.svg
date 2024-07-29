@@ -1,0 +1,9 @@
+<svg
+className="h-10 w-10 text-slate-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+>
+<path
+strokeLinecap="round"
+strokeLinejoin="round"
+d="M12 6.75a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm0 5.25a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm0 5.25a1.5 1.5 0 110-3 1.5 1.5 0 010 3z"
+/>
+</svg>

@@ -1,3 +1,4 @@
+import { Avatars } from '@/utils/avatars';
 import { useQuery } from '@tanstack/react-query';
 
 interface Mensaje {
@@ -11,7 +12,7 @@ interface Mensaje {
 
 interface MensajeGroup {
   nombre: string;
-  thumbnail: string;
+  thumbnail: keyof Avatars;
   ultima_conexion: string;
   id: number;
   nro: string;

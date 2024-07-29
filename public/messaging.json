@@ -1,7 +1,7 @@
 [
   {
     "nombre": "Rick Sanchez",
-    "thumbnail": "rick",
+    "thumbnail": "RickSanchez",
     "ultima_conexion": "hoy",
     "id": 1,
     "nro": "555-555-5555",
@@ -42,7 +42,7 @@
   },
   {
     "nombre": "Morty Smith",
-    "thumbnail": "morty",
+    "thumbnail": "MortySmith",
     "ultima_conexion": "ayer",
     "id": 2,
     "nro": "555-555-5555",
@@ -74,7 +74,7 @@
       {
         "autor": "yo",
         "texto": "Claro, Morty, ¿qué necesitas?",
-        "estado": "entregado",
+        "estado": "visto",
         "dia": "hoy",
         "hora": "10:15",
         "id": "4"
@@ -83,7 +83,7 @@
   },
   {
     "nombre": "Summer Smith",
-    "thumbnail": "summer",
+    "thumbnail": "SummerSmith",
     "ultima_conexion": "hoy",
     "id": 3,
     "nro": "555-555-5555",
@@ -124,7 +124,7 @@
   },
   {
     "nombre": "Jerry Smith",
-    "thumbnail": "jerry",
+    "thumbnail": "JerrySmith",
     "ultima_conexion": "ayer",
     "id": 4,
     "nro": "555-555-5555",
@@ -165,7 +165,7 @@
   },
   {
     "nombre": "Beth Smith",
-    "thumbnail": "beth",
+    "thumbnail": "BethSmith",
     "ultima_conexion": "hoy",
     "id": 5,
     "nro": "555-555-5555",
