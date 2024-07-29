@@ -43,7 +43,7 @@ npm install
 
 To start the project in development mode, use:
 ```bash
-npm run build
+npm run dev
 ```
 
 To build the application for production, run:
