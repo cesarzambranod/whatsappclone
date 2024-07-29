@@ -1,5 +1,5 @@
-import React from "react";
-import { Contact } from "../Contact";
+import React, { useState, useEffect } from "react";
+import { Contact as ContactComponent } from "../Contact";
 import { Avatars } from "@/utils/avatars";
 import { useMessages } from "@/Hooks/useMessages";
 
@@ -16,51 +16,43 @@ interface Contact {
   mensajes: Message[];
 }
 
-interface ListsContactsProps {
+interface ListContactsProps {
   search: string;
 }
 
-const ListContacts: React.FC<ListsContactsProps> = ({ search }) => {
+const ListContacts: React.FC<ListContactsProps> = ({ search }) => {
   const { data, error, isLoading } = useMessages();
-  const [contactosFiltrados, setContactosFiltrados] = React.useState<Contact[]>(
-    []
-  );
+  const [contacts, setContacts] = useState<Contact[]>([]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (data) {
-      const contactos: Contact[] = data.map((group) => ({
+      const formattedContacts: Contact[] = data.map((group) => ({
         id: group.id.toString(),
         nombre: group.nombre,
         thumbnail: group.thumbnail as keyof Avatars,
-        mensajes: group.mensajes.map((mensaje) => ({
-          texto: mensaje.texto,
-          hora: mensaje.hora,
-          estado: mensaje.estado as "visto" | "entregado" | "no_entregado",
+        mensajes: group.mensajes.map((message) => ({
+          texto: message.texto,
+          hora: message.hora,
+          estado: message.estado as "visto" | "entregado" | "no_entregado",
         })),
       }));
-      setContactosFiltrados(contactos);
+      setContacts(formattedContacts);
     }
   }, [data]);
 
-  React.useEffect(() => {
-    if (search) {
-      setContactosFiltrados((prevContactos) =>
-        prevContactos.filter((contacto) =>
-          contacto.nombre.toLowerCase().includes(search.toLowerCase())
-        )
-      );
-    } else {
-      setContactosFiltrados((prevContactos) => prevContactos);
-    }
-  }, [search]);
+  const filteredContacts = search
+    ? contacts.filter((contact) =>
+        contact.nombre.toLowerCase().includes(search.toLowerCase())
+      )
+    : contacts;
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
 
   return (
     <div className="p-4 space-y-2">
-      {contactosFiltrados.map((contacto) => (
-        <Contact key={contacto.id} contact={contacto} />
+      {filteredContacts.map((contact) => (
+        <ContactComponent key={contact.id} contact={contact} />
       ))}
     </div>
   );

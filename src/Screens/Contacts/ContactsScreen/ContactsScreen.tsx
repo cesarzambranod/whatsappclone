@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-import { ContactsHeader, ContactsFooter, ListContacts } from "@/Componets/Contacts";
+import {
+  ContactsHeader,
+  ContactsFooter,
+  ListContacts,
+} from "@/Componets/Contacts";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 const queryClient = new QueryClient();
 const ContactsScreen = () => {
@@ -15,8 +19,7 @@ const ContactsScreen = () => {
         onSearchChange={handleSearchChange}
       ></ContactsHeader>
       <QueryClientProvider client={queryClient}>
-
-      <ListContacts  search={search}/>
+        <ListContacts search={search} />
       </QueryClientProvider>
       <ContactsFooter />
     </>
