@@ -13,6 +13,7 @@ This is a practical project developed using React with TypeScript and Tailwind C
 - **react**: The core library for building user interfaces in React.
 - **react-dom**: Provides methods specific to interacting with the web DOM.
 - **react-router-dom**: Routing library for React applications, allowing management of navigation and conditional rendering of components based on the URL.
+- **zustand**: A small, fast, and scalable state management library for React applications.
 
 ### Development Dependencies
 

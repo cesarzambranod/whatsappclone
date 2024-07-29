@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Contact as ContactComponent } from "../Contact";
 import { Avatars } from "@/utils/avatars";
 import { useMessages } from "@/Hooks/useMessages";
+import useContactStore from "@/Store/useContactStore";
 
 interface Message {
   texto: string;
@@ -22,7 +23,7 @@ interface ListContactsProps {
 
 const ListContacts: React.FC<ListContactsProps> = ({ search }) => {
   const { data, error, isLoading } = useMessages();
-  const [contacts, setContacts] = useState<Contact[]>([]);
+  const { filteredContacts, setContacts, setSearch } = useContactStore();
 
   useEffect(() => {
     if (data) {
@@ -38,13 +39,11 @@ const ListContacts: React.FC<ListContactsProps> = ({ search }) => {
       }));
       setContacts(formattedContacts);
     }
-  }, [data]);
+  }, [data, setContacts]);
 
-  const filteredContacts = search
-    ? contacts.filter((contact) =>
-        contact.nombre.toLowerCase().includes(search.toLowerCase())
-      )
-    : contacts;
+  useEffect(() => {
+    setSearch(search);
+  }, [search, setSearch]);
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
