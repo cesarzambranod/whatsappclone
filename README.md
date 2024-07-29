@@ -37,8 +37,16 @@ This is a practical project developed using React with TypeScript and Tailwind C
 - **preview**: Shows a preview of the built application.
 
 To install dependencies, run:
-
 ```bash
-npm install & npm run dev
+npm install
+```
 
+To start the project in development mode, use:
+```bash
+npm run build
+```
+
+To build the application for production, run:
+```bash
+npm run build
 ```
