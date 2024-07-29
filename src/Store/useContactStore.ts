@@ -1,4 +1,4 @@
-import { Avatars } from '@/utils/avatars';
+import { Avatars } from '@/Utils/avatars';
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 

@@ -1,4 +1,4 @@
-import { Avatars } from '@/utils/avatars';
+import { Avatars } from '@/Utils/avatars';
 import { useQuery } from '@tanstack/react-query';
 
 interface Mensaje {

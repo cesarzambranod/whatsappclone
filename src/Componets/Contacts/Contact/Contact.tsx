@@ -1,5 +1,5 @@
 import React from "react";
-import { avatars, Avatars } from "@/utils/avatars";
+import { avatars, Avatars } from "@/Utils/avatars";
 import { Link } from "react-router-dom";
 import checkIcon from "@/assets/icons/check.svg";
 import doubleCheckIcon from "@/assets/icons/doublecheck.svg";

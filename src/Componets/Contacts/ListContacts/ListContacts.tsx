@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Contact as ContactComponent } from "../Contact";
-import { Avatars } from "@/utils/avatars";
+import { Avatars } from "@/Utils/avatars";
 import { useMessages } from "@/Hooks/useMessages";
 import useContactStore from "@/Store/useContactStore";
 
