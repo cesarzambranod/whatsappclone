@@ -28,7 +28,7 @@ const Contacts: React.FC<ContactProps> = ({ contact }) => {
   };
 
   return (
-    <Link className="block text-gray-900" to={`/mensajes/${id}`}>
+    <Link className="block text-gray-900" to={`/message/${id}`}>
       <div className="flex items-center p-3 border-b border-gray-200 hover:bg-gray-100">
         <img
           className="w-12 h-12 rounded-full mr-3"

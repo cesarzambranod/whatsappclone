@@ -55,7 +55,7 @@ const ContactoInfo: React.FC = () => {
   return (
     <div className="p-4">
       <div className="flex items-start bg-green-700 text-white p-4 justify-between">
-        <Link to={`/mensajes/${contacto.id}`}>
+        <Link to={`/message/${contacto.id}`}>
           <ArrowLeft className="text-2xl" />
         </Link>
         <div className="flex flex-col items-center">
