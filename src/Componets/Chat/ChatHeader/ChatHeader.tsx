@@ -13,7 +13,11 @@ interface ChatHeaderProps {
   contactoID: string;
 }
 
-const ChatHeader: React.FC<ChatHeaderProps> = ({ search, onSearchChange, contactoID }) => {
+const ChatHeader: React.FC<ChatHeaderProps> = ({
+  search,
+  onSearchChange,
+  contactoID,
+}) => {
   const { filteredContacts } = useContactStore();
   const [contacto, setContacto] = useState<Contact | null>(null);
   const [menuVisible, setMenuVisible] = useState(false);
@@ -41,30 +45,43 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({ search, onSearchChange, contact
   };
 
   return (
-    <div className={`chat-header ${searchVisible ? "search-visible" : ""} flex items-center justify-between bg-green-600 p-4 shadow-md rounded-t-lg`}>
-      {searchVisible && (
-        <FormSerchMessage search={search} onSearchChange={onSearchChange} />
-      )}
-      
+    <div
+      className={`chat-header ${
+        searchVisible ? "search-visible" : ""
+      } flex items-center justify-between bg-green-600 p-4 shadow-md rounded-t-lg`}
+    >
       <Link to="/contacts" className="text-white">
         <ArrowLeft className="arrow w-6 h-6" />
       </Link>
-      {contacto && (
-        <Link to={`/contactInfo/${contacto.id}`} className="contacto flex items-center ml-3 text-white">
+      {searchVisible && (
+        <FormSerchMessage search={search} onSearchChange={onSearchChange} />
+      )}
+
+      {contacto && !searchVisible && (
+        <Link
+          to={`/contactInfo/${contacto.id}`}
+          className="contacto flex items-center ml-3 text-white"
+        >
           <img
             src={imgSrc}
             alt={contacto.nombre}
             className="w-10 h-10 rounded-full"
           />
-          <div className="contact-info ml-3">
-            <div className="contact-name font-medium text-lg">{contacto.nombre}</div>
+          <div className="contact-info ml-3 mr-3">
+            <div className="contact-name font-medium text-lg">
+              {contacto.nombre}
+            </div>
             <div className="contact-status text-sm">Online</div>
           </div>
         </Link>
       )}
       <div className="iconos flex items-center space-x-3 ml-auto text-white relative">
-        <Video className="w-6 h-6 cursor-pointer" />
-        <Phone className="w-6 h-6 cursor-pointer" />
+        {!searchVisible && (
+          <>
+            <Video className="w-6 h-6 cursor-pointer" />
+            <Phone className="w-6 h-6 cursor-pointer" />
+          </>
+        )}
         <MoreVertical onClick={toggleMenu} className="w-6 h-6 cursor-pointer" />
         {menuVisible && (
           <div className="context-menu absolute right-0 top-full mt-2 w-48 bg-white shadow-lg rounded-lg z-10">
