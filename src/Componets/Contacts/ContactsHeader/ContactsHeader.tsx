@@ -1,5 +1,5 @@
 import React from "react";
-import {Camera , MoreVertical } from "lucide-react";
+import { Camera, MoreVertical } from "lucide-react";
 import FormSearchContacts from "../FormSearchContacts/FormSearchContacts";
 
 interface ContactosHeaderProps {
@@ -13,14 +13,11 @@ const ContactosHeader: React.FC<ContactosHeaderProps> = ({
 }) => {
   return (
     <>
-      <div className="flex items-center justify-between p-4 bg-gray-900 dark:bg-gray-800">
+      <div className="flex flex-col items-center justify-between p-4 bg-gray-900 dark:bg-gray-800">
         <div className="text-lg font-bold text-gray-100 dark:text-white">
           WhatsApp
         </div>
-        <div className="flex items-center justify-between">
-          <FormSearchContacts search={search} onSearchChange={onSearchChange} />
-        </div>
-        <div className="flex space-x-4">
+        <div className="flex items-center justify-end w-full">
           <button className="flex flex-col items-center">
             <Camera className="text-white w-6 h-6" />
           </button>
@@ -28,6 +25,7 @@ const ContactosHeader: React.FC<ContactosHeaderProps> = ({
             <MoreVertical className="text-white w-6 h-6" />
           </button>
         </div>
+        <FormSearchContacts search={search} onSearchChange={onSearchChange} />
       </div>
     </>
   );
