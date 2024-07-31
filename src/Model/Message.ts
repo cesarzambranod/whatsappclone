@@ -1,8 +1,10 @@
+import { ReactNode } from "react";
+
 export default interface Message {
     id: number;
-    texto: string;
+    texto: string | ReactNode;
     hora: string;
     estado: "visto" | "entregado" | "no_entregado";
     autor: string;
-    dia: string;
+    dia?: string;
   }

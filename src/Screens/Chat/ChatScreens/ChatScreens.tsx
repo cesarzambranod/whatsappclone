@@ -1,11 +1,11 @@
+import "./ChatScreens.css";
 import { useState } from "react";
 import Message from "@/Model/Message";
 import  { ChatHeader } from "@/Componets/Chat";
-import "./ChatScreens.css";
 import { useParams } from "react-router-dom";
-
-
-
+import { ListMessages } from "@/Componets/Chat/ListMessages";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+const queryClient = new QueryClient();
 const ChatScreens = () => {
   const [mensajes, setMensajes] = useState<Message[]>([]);
   const [search, setSearch] = useState<string>("");
@@ -29,14 +29,11 @@ const ChatScreens = () => {
   };
 
   return (
-    <div className="chat-screens">
-      <ChatHeader search={search} onSearchChange={handleSearchChange} contactoID= {contactoID} />
-      {/* <ListaMensajes
-        contactoID={contactoID}
-        message={mensajes[mensajes.length - 1]}
-        search={search}
-      />
-      <NuevoMensajeForm handleSubmitNewMessage={handleNewMessage} /> */}
+    <div className="chatscreens">
+      <ChatHeader search={search} onSearchChange={handleSearchChange} contactoID= {contactoID!} />
+      <QueryClientProvider client={queryClient}>
+       <ListMessages mensaje={mensajes[mensajes.length - 1]} search={search} />
+      </QueryClientProvider>
     </div>
   );
 };
