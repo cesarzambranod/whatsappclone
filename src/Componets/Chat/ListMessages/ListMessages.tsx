@@ -5,7 +5,7 @@ import Contact from "@/Model/Contact";
 import Messages from "../Messages/Messages";
 import { useMessages } from "@/Hooks/useMessages";
 import useContactStore from "@/Store/useContactStore";
-import "./ListMessages.css"
+import "./ListMessages.css";
 
 interface ListMessagesProps {
   mensaje?: Message;
@@ -74,7 +74,7 @@ const ListMessages: React.FC<ListMessagesProps> = ({ mensaje, search }) => {
   };
 
   return (
-    <div className="flex flex-col overflow-scroll h-screen listmessages">
+    <div className="listmessages flex flex-col overflow-scroll pt-20 pb-10">
       {mensajesIniciales.map((msj, index) => (
         <Messages
           message={{

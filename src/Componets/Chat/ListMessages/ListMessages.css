@@ -1,7 +1,9 @@
 .listmessages {
-  background-image: image-set("../../../assets/img/wallpaper/wallpaper.jpg");
+  background-image: url('../../../assets/img/wallpaper/wallpaper.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  max-height: 51rem;
+  overflow-y: scroll;
+  height: 100vh;
+  padding-top: 4rem; /* Ajusta según la altura del ChatHeader */
 }
