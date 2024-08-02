@@ -2,9 +2,9 @@
 
 This is a practical project developed using React with TypeScript and Tailwind CSS. The goal of this work is to create a modern and styled web application with a robust and scalable structure.
 
-## Installed Libraries and Tools
+## Installed Libraries and Tools 📗
 
-### Dependencies
+### Dependencies 🧐
 
 - **@tanstack/react-query**: A library for managing and synchronizing data in React applications, facilitating data fetching, caching, and synchronization.
 - **@types/node**: Type definitions for Node.js, necessary for TypeScript development.
@@ -30,7 +30,7 @@ This is a practical project developed using React with TypeScript and Tailwind C
 - **typescript**: A superset of JavaScript that adds static typing to the language, improving code robustness and maintainability.
 - **vite**: A modern build tool that offers fast startup and hot-reloading times during development.
 
-## Available Scripts
+## Available Scripts 
 
 - **dev**: Starts the development server with Vite.
 - **build**: Compiles the project with TypeScript and builds the application with Vite.
@@ -52,7 +52,14 @@ To build the application for production, run:
 npm run build
 ```
 
-## Pages
+## Pages 
 - "/" Home is page list of contacts, this has a contact filter, clicking on the contact takes you to the messages
 - "/message/:contacto" page lists the contact's messages, clicking on the header will take you to the contact information as well as in the three points in (Ver contacto), in (Buscar) this highlights what I searched for with a yellow background
 - "/contact Info/:contact" contact information page
+
+## Demo 🔗
+[whatsappclone-one.vercel.app](https://whatsappclone-one.vercel.app/)
+
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
