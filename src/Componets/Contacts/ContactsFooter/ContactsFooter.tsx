@@ -10,15 +10,15 @@ const ContactsFooter = () => {
       </button>
       <button className="flex flex-col items-center">
         <Info className="w-6 h-6" />
-        <span className="text-xs mt-1">Status</span>
+        <span className="text-xs mt-1">Novedades</span>
       </button>
       <button className="flex flex-col items-center">
         <Users className="w-6 h-6" />
-        <span className="text-xs mt-1">Groups</span>
+        <span className="text-xs mt-1">Comunidades</span>
       </button>
       <button className="flex flex-col items-center">
         <Phone className="w-6 h-6" />
-        <span className="text-xs mt-1">Calls</span>
+        <span className="text-xs mt-1">Llamadas</span>
       </button>
     </footer>
   );
