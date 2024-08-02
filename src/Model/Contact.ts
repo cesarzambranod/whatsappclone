@@ -1,5 +1,5 @@
-import Message from '@/Model/Message'
-import Avatars from '@/Model/Avatar'
+import Message from './Message';
+import Avatars from './Avatar'
 export default interface Contact {
     id: number;
     nombre: string;

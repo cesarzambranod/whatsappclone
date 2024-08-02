@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import Contact from "@/Model/Contact";
-import { avatars } from "@/Utils/avatars";
 import { ArrowLeft, MoreVertical } from "lucide-react";
 import {
   Phone,
@@ -14,8 +12,11 @@ import {
   Image,
   ShieldCheck,
 } from "lucide-react";
-import { useMessages } from "@/Hooks/useMessages";
-import useContactStore from "@/Store/useContactStore";
+import useContactStore from "../../../Store/useContactStore";
+import {useMessages} from "../../../Hooks/useMessages";
+import Contact from "../../../Model/Contact";
+import { avatars } from "../../../utils/avatars";
+
 
 const ContactoInfo: React.FC = () => {
   const { contactoID } = useParams<{ contactoID: string }>();

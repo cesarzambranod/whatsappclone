@@ -1,10 +1,6 @@
 import React, { useState } from "react";
-import {
-  ContactsHeader,
-  ContactsFooter,
-  ListContacts,
-} from "@/Componets/Contacts";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ContactsFooter, ContactsHeader, ListContacts } from "../../../Componets/Contacts";
 const queryClient = new QueryClient();
 const ContactsScreen = () => {
   const [search, setSearch] = useState("");

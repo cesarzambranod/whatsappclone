@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Message from "@/Model/Message";
-import Contact from "@/Model/Contact";
-import Messages from "../Messages/Messages";
-import { useMessages } from "@/Hooks/useMessages";
-import useContactStore from "@/Store/useContactStore";
 import "./ListMessages.css";
+import { useMessages } from "../../../Hooks/useMessages";
+import useContactStore from "../../../Store/useContactStore";
+import Message from "../../../Model/Message";
+import { Messages } from "../Messages";
+import Contact from "../../../Model/Contact";
 
 interface ListMessagesProps {
   mensaje?: Message;

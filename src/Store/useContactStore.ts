@@ -1,6 +1,6 @@
-import Contact from "@/Model/Contact";
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
+import Contact from "../Model/Contact";
 
 interface ContactState {
     contacts: Contact[];

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Video, Phone, MoreVertical } from "lucide-react";
-import useContactStore from "@/Store/useContactStore";
-import { avatars } from "@/Utils/avatars";
-import Contact from "@/Model/Contact";
 import { FormSerchMessage } from "../FormSerchMessage";
 import "./ChatHeader.css";
+import useContactStore from "../../../Store/useContactStore";
+import Contact from "../../../Model/Contact";
+import { avatars } from "../../../utils/avatars";
 
 interface ChatHeaderProps {
   search: string;

@@ -1,6 +1,7 @@
 import React from "react";
 import { Check, CheckCheck } from "lucide-react";
-import Message from '@/Model/Message';
+import Message from "../../../Model/Message";
+
 
 interface MessageProps {
   message: Message;

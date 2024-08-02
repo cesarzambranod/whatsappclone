@@ -1,9 +1,8 @@
 import React from "react";
-import { avatars } from "@/Utils/avatars";
 import { Link } from "react-router-dom";
 import { Check, CheckCheck } from "lucide-react";
-import type Contact from "@/Model/Contact";
-
+import { avatars } from "../../../utils/avatars";
+import Contact from "../../../Model/Contact";
 interface ContactProps {
   contact: Contact;
 }

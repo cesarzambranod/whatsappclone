@@ -1,8 +1,9 @@
 import React, { useEffect } from "React";
 import { Contacts as ContactComponent } from "../Contacts";
-import Contact  from "@/Model/Contact";
-import { useMessages } from "@/Hooks/useMessages";
-import useContactStore from "@/Store/useContactStore";
+import { useMessages } from "../../../Hooks/useMessages";
+import useContactStore from "../../../Store/useContactStore";
+import Contact from "../../../Model/Contact";
+
 
 interface ListContactsProps {
   search: string;

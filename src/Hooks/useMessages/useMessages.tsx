@@ -1,5 +1,5 @@
-import Contact from '@/Model/Contact';
 import { useQuery } from '@tanstack/react-query';
+import Contact from '../../Model/Contact';
 
 
 const fetchMessages = async (): Promise<Contact[]> => {
