@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Contact from "@/Model/Contact";
-import { avatars } from "@/Utils/avatars";
+import { avatars } from "@/utils/avatars";
 import { ArrowLeft, MoreVertical } from "lucide-react";
 import {
   Phone,

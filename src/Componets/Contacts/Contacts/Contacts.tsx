@@ -1,5 +1,5 @@
 import React from "react";
-import { avatars } from "@/Utils/avatars";
+import { avatars } from "@/utils/avatars";
 import { Link } from "react-router-dom";
 import { Check, CheckCheck } from "lucide-react";
 import type Contact from "@/Model/Contact";
