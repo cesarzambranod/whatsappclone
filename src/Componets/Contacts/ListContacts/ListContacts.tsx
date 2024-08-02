@@ -1,4 +1,4 @@
-import React, { useEffect } from "React";
+import React, { useEffect } from "react";
 import { Contacts as ContactComponent } from "../Contacts";
 import Contact  from "@/Model/Contact";
 import { useMessages } from "@/Hooks/useMessages";
