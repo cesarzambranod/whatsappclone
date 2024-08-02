@@ -1,0 +1,8 @@
+.chatscreens {
+  background-image: image-set("../../../assets/img/wallpaper/wallpaper.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: scroll;
+  height: 100vh;
+}

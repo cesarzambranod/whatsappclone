@@ -1,30 +1,53 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite + Tailwind CSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a practical project developed using React with TypeScript and Tailwind CSS. The goal of this work is to create a modern and styled web application with a robust and scalable structure.
 
-Currently, two official plugins are available:
+## Installed Libraries and Tools
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Dependencies
 
-## Expanding the ESLint configuration
+- **@tanstack/react-query**: A library for managing and synchronizing data in React applications, facilitating data fetching, caching, and synchronization.
+- **@types/node**: Type definitions for Node.js, necessary for TypeScript development.
+- **flowbite** and **flowbite-react**: Flowbite UI components for React that provide a set of predefined components and styles based on Tailwind CSS.
+- **lucide** and **lucide-react**: An open-source icon set with React support, used for adding scalable icons to the interface.
+- **react**: The core library for building user interfaces in React.
+- **react-dom**: Provides methods specific to interacting with the web DOM.
+- **react-router-dom**: Routing library for React applications, allowing management of navigation and conditional rendering of components based on the URL.
+- **zustand**: A small, fast, and scalable state management library for React applications.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Development Dependencies
 
-- Configure the top-level `parserOptions` property like this:
+- **@types/react** and **@types/react-dom**: Type definitions for React and React DOM, facilitating TypeScript development.
+- **@types/react-query**: Type definitions for the react-query library.
+- **@typescript-eslint/eslint-plugin** and **@typescript-eslint/parser**: Tools for integrating ESLint with TypeScript, helping to maintain clean and error-free code.
+- **@vitejs/plugin-react**: Plugin for integrating React with Vite, a fast build tool.
+- **autoprefixer**: PostCSS plugin that adds automatic vendor prefixes to CSS rules to ensure cross-browser compatibility.
+- **eslint**: Tool for static code analysis that helps identify issues and errors in JavaScript/TypeScript code.
+- **eslint-plugin-react-hooks**: ESLint plugin that provides additional rules for working with React hooks.
+- **eslint-plugin-react-refresh**: ESLint plugin that enables checking for React Refresh-specific issues during development.
+- **postcss**: Tool for processing CSS, used with Tailwind CSS to generate the final CSS.
+- **tailwindcss**: CSS utility framework for fast and efficient UI design.
+- **typescript**: A superset of JavaScript that adds static typing to the language, improving code robustness and maintainability.
+- **vite**: A modern build tool that offers fast startup and hot-reloading times during development.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Available Scripts
+
+- **dev**: Starts the development server with Vite.
+- **build**: Compiles the project with TypeScript and builds the application with Vite.
+- **lint**: Runs ESLint to check the code and detect issues.
+- **preview**: Shows a preview of the built application.
+
+To install dependencies, run:
+```bash
+npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+To start the project in development mode, use:
+```bash
+npm run dev
+```
+
+To build the application for production, run:
+```bash
+npm run build
+```

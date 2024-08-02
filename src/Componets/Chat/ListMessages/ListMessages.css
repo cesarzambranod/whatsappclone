@@ -1,0 +1,9 @@
+.listmessages {
+  background-image: url('../../../assets/img/wallpaper/wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-y: scroll;
+  height: 100vh;
+  padding-top: 4rem; /* Ajusta según la altura del ChatHeader */
+}
