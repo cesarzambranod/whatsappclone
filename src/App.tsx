@@ -9,7 +9,6 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<ContactsScreen />} />
-        <Route path="/contacts" element={<ContactsScreen />} />
         <Route path="/message/:contactoID" element={<ChatScreens />} />
         <Route path="/contactInfo/:contactoID" element={<InfoScreen />} />
       </Routes>

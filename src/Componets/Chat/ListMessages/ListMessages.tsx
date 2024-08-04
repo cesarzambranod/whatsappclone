@@ -1,42 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import Message from "@/Model/Message";
-import Contact from "@/Model/Contact";
 import Messages from "../Messages/Messages";
-import { useMessages } from "@/Hooks/useMessages";
 import useContactStore from "@/Store/useContactStore";
 import "./ListMessages.css";
 
 interface ListMessagesProps {
   mensaje?: Message;
   search?: string;
+  contactoID? : string;
 }
 
-const ListMessages: React.FC<ListMessagesProps> = ({ mensaje, search }) => {
-  const { contactoID } = useParams<{ contactoID: string }>();
-  const { data, error, isLoading } = useMessages();
-  const { filteredContacts, setContacts } = useContactStore();
-
+const ListMessages: React.FC<ListMessagesProps> = ({ mensaje, search, contactoID }) => {
+  const { filteredContacts } = useContactStore();
   const [mensajesIniciales, setMensajesIniciales] = useState<Message[]>([]);
-
-  useEffect(() => {
-    if (data) {
-      const formattedContacts: Contact[] = data.map((group) => ({
-        id: Number(group.id),
-        nombre: group.nombre,
-        thumbnail: group.thumbnail,
-        mensajes: group.mensajes.map((message) => ({
-          id: Number(message.id),
-          texto: message.texto,
-          hora: message.hora,
-          estado: message.estado as "visto" | "entregado" | "no_entregado",
-          autor: message.autor,
-          dia: message.dia,
-        })),
-      }));
-      setContacts(formattedContacts);
-    }
-  }, [data, setContacts]);
 
   useEffect(() => {
     if (mensaje) {
@@ -55,8 +31,6 @@ const ListMessages: React.FC<ListMessagesProps> = ({ mensaje, search }) => {
     }
   }, [filteredContacts, contactoID]);
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
 
   const highlightSearch = (texto: string, search: string | undefined) => {
     if (!search) return texto;
