@@ -59,7 +59,3 @@ npm run build
 
 ## Demo
 [whatsappclone-one.vercel.app](https://whatsappclone-one.vercel.app/)
-
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
