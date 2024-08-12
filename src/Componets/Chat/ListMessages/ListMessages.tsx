@@ -48,7 +48,7 @@ const ListMessages: React.FC<ListMessagesProps> = ({ mensaje, search, contactoID
   };
 
   return (
-    <div className="listmessages flex flex-col overflow-scroll pt-20 pb-10">
+    <div className="listmessages flex flex-col pt-20 pb-10">
       {mensajesIniciales.map((msj, index) => (
         <Messages
           message={{
