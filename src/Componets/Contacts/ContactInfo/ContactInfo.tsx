@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useParams, Link } from "react-router-dom";
-import Contact from "@/Model/Contact";
 import { avatars } from "@/utils/avatars";
 import { ArrowLeft, MoreVertical } from "lucide-react";
 import {
@@ -14,35 +13,11 @@ import {
   Image,
   ShieldCheck,
 } from "lucide-react";
-import { useMessages } from "@/Hooks/useMessages";
 import useContactStore from "@/Store/useContactStore";
 
 const ContactoInfo: React.FC = () => {
   const { contactoID } = useParams<{ contactoID: string }>();
-  const { data, error, isLoading } = useMessages();
-  const { filteredContacts, setContacts } = useContactStore();
-
-  useEffect(() => {
-    if (data) {
-      const formattedContacts: Contact[] = data.map((group) => ({
-        id: Number(group.id),
-        nombre: group.nombre,
-        thumbnail: group.thumbnail,
-        mensajes: group.mensajes.map((message) => ({
-          id: Number(message.id),
-          texto: message.texto,
-          hora: message.hora,
-          estado: message.estado as "visto" | "entregado" | "no_entregado",
-          autor: message.autor,
-          dia: message.dia,
-        })),
-      }));
-      setContacts(formattedContacts);
-    }
-  }, [data, setContacts]);
-
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
+  const { filteredContacts } = useContactStore();
 
   const contacto = filteredContacts.find((c) => c.id === Number(contactoID));
 

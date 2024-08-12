@@ -51,7 +51,7 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({
       } flex items-center justify-between bg-green-600 p-4 shadow-md`}
       style={{ position: "fixed", top: 0, width: "100%", zIndex: 10 }}
     >
-      <Link to="/contacts" className="text-white">
+      <Link to="/" className="text-white">
         <ArrowLeft className="arrow w-6 h-6" />
       </Link>
       {searchVisible && (

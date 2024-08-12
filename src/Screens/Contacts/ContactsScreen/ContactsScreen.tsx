@@ -13,16 +13,14 @@ const ContactsScreen = () => {
     setSearch(value);
   };
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <ContactsHeader
         search={search}
         onSearchChange={handleSearchChange}
       ></ContactsHeader>
-      <QueryClientProvider client={queryClient}>
-        <ListContacts search={search} />
-      </QueryClientProvider>
+      <ListContacts search={search} />
       <ContactsFooter />
-    </>
+    </QueryClientProvider>
   );
 };
 

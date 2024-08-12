@@ -1,6 +1,6 @@
 import Contact from "@/Model/Contact";
 import { create } from "zustand";
-import { devtools } from "zustand/middleware";
+import { createJSONStorage, persist } from "zustand/middleware";
 
 interface ContactState {
     contacts: Contact[];
@@ -11,7 +11,7 @@ interface ContactState {
 }
 
 const useContactStore = create<ContactState>()(
-    devtools((set) => ({
+    persist((set) => ({
         contacts: [],
         filteredContacts: [],
         search: "",
@@ -29,7 +29,12 @@ const useContactStore = create<ContactState>()(
                     : state.contacts,
             }));
         },
-    }))
+    }),
+        {
+            name: 'contact',
+            storage: createJSONStorage(() => sessionStorage),
+        }
+    )
 );
 
 export default useContactStore;

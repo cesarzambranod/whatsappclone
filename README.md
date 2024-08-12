@@ -57,7 +57,7 @@ npm run build
 - "/message/:contacto" page lists the contact's messages, clicking on the header will take you to the contact information as well as in the three points in (Ver contacto), in (Buscar) this highlights what I searched for with a yellow background
 - "/contact Info/:contact" contact information page
 
-## Demo 🔗
+## Demo
 [whatsappclone-one.vercel.app](https://whatsappclone-one.vercel.app/)
 
 
